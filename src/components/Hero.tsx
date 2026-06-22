@@ -78,7 +78,7 @@ export default function Hero() {
                     alt="Portrait of Sharath Chandra Kancherla"
                     fill
                     priority
-                    className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105 filter grayscale contrast-125 group-hover:grayscale-0"
+                    className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                     sizes="(min-width: 1024px) 35vw, 90vw"
                   />
                 </div>

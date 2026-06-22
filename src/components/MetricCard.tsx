@@ -15,9 +15,21 @@ export default function MetricCard({ metric }: { metric: Metric }) {
           setHasAnimated(true);
           const start = 0;
           const end = metric.value;
-          const duration = 2000; // 2 seconds
+          
+          // Determine duration based on target value
+          // Small numbers finish quickly (e.g. 500ms for 1.5, 700ms for 8, 10, 13) to avoid laggy stepping.
+          // Larger numbers take slightly longer but are capped to keep the UI snappy.
+          const getDuration = (val: number) => {
+            if (val <= 2) return 500;
+            if (val <= 15) return 700;
+            if (val <= 100) return 1000;
+            if (val <= 1000) return 1500;
+            return 2000;
+          };
+          const duration = getDuration(end);
           const startTime = performance.now();
 
+          let lastVal = start;
           const animate = (currentTime: number) => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
@@ -26,12 +38,18 @@ export default function MetricCard({ metric }: { metric: Metric }) {
             const easeProgress = progress * (2 - progress);
             const current = start + (end - start) * easeProgress;
             
-            setDisplayValue(current);
+            const nextVal = metric.isDecimal
+              ? parseFloat(current.toFixed(1))
+              : Math.floor(current);
+
+            // Only trigger state updates and re-renders when the value actually changes
+            if (nextVal !== lastVal || progress === 1) {
+              lastVal = nextVal;
+              setDisplayValue(progress === 1 ? end : nextVal);
+            }
 
             if (progress < 1) {
               requestAnimationFrame(animate);
-            } else {
-              setDisplayValue(end);
             }
           };
 
@@ -48,7 +66,7 @@ export default function MetricCard({ metric }: { metric: Metric }) {
     return () => {
       observer.disconnect();
     };
-  }, [metric.value, hasAnimated]);
+  }, [metric.value, metric.isDecimal, hasAnimated]);
 
   const formattedValue = metric.isDecimal
     ? displayValue.toFixed(1)

@@ -1,18 +1,26 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+// ------------------------------------------------------------------
+// FONT CONFIGURATION
+// To easily change fonts across the entire application:
+// 1. Change the imports from 'next/font/google' above.
+// 2. Define the new display and body fonts below, ensuring you map
+//    them to the '--font-display' and '--font-body' variable names.
+// ------------------------------------------------------------------
+
+const displayFont = Playfair_Display({
+  variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const bodyFont = Plus_Jakarta_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -41,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} scroll-smooth`}
+      className={`${displayFont.variable} ${bodyFont.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-paper text-ink antialiased">
         {children}
