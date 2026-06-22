@@ -59,8 +59,9 @@ export default function MetricCard({ metric }: { metric: Metric }) {
       { threshold: 0.1 }
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
+    const parentSection = cardRef.current?.closest("section");
+    if (parentSection) {
+      observer.observe(parentSection);
     }
 
     return () => {
