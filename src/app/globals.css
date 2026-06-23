@@ -1,16 +1,141 @@
 @import "tailwindcss";
 
 :root {
-  /* Monochrome theme tokens */
-  --color-paper: #ffffff; /* Pure white background */
-  --color-ink: #000000; /* Absolute black text */
-  --color-ink-soft: #52525b; /* Zinc-600 for secondary text */
-  --color-moss: #000000; /* Primary action color */
-  --color-moss-dark: #18181b; /* Zinc-900 for hovered actions */
-  --color-clay: #000000; /* Accent color */
-  --color-stone: #e4e4e7; /* Zinc-200 for borders */
-  --color-stone-light: #f4f4f5; /* Zinc-100 for card backgrounds */
-  --color-border-active: #000000; /* Active border */
+  /* ==================================================================
+     COLOR SCHEME OPTIONS (Popping & Rich Color Palettes)
+     To switch, uncomment one palette and comment out the others.
+     ================================================================== */
+
+  /* --- PALETTE 1: Earthy Terracotta & Sage (ACTIVE DEFAULT) ---
+     A warm, botanical vibe with Terracotta (orange), Sage (green), Pine, and Almond
+  --color-paper: #FCF8F5;
+  --color-ink: #2E1E16;
+  --color-ink-soft: #6A5C55;
+  --color-moss: #4D6A60;
+  --color-moss-dark: #3B524A;
+  --color-clay: #D36135;
+  --color-stone: #E8DCD5;
+  --color-stone-light: #E5EDE5;
+  --color-border-active: #D36135;
+ */
+
+
+  /* --- PALETTE 2: Cosmic Indigo & Amber (Commented Out) ---
+     A celestial, spiritual vibe with Midnight Navy, Indigo, Pale Blue, and Popping Amber
+      */
+  --color-paper: #FAF8FF;
+  --color-ink: #0F1026;
+  --color-ink-soft: #4F5175;
+  --color-moss: #342A9B;
+  --color-moss-dark: #261E7B;
+  --color-clay: #F2A104;
+  --color-stone: #E2DFF5;
+  --color-stone-light: #E6E8FF;
+  --color-border-active: #F2A104;
+
+
+  /* --- PALETTE 3: Forest Eucalyptus & Ochre (Commented Out) ---
+     An organic healing vibe with Forest Green, Mint, and Sunlit Ochre
+  --color-paper: #F8F9FA;
+  --color-ink: #132E27;
+  --color-ink-soft: #455E57;
+  --color-moss: #1E4E42;
+  --color-moss-dark: #163A31;
+  --color-clay: #D98A29;
+  --color-stone: #D1DDD9;
+  --color-stone-light: #EAF0EE;
+  --color-border-active: #D98A29;
+  */
+
+  /* --- PALETTE 4: Rosewood & Warm Mustard (Commented Out) ---
+     A bold retro warmth vibe with Wine Red, Dusty Pink, and Warm Mustard
+  --color-paper: #FAF7F2;
+  --color-ink: #3D131A;
+  --color-ink-soft: #7A565C;
+  --color-moss: #63202E;
+  --color-moss-dark: #4C1722;
+  --color-clay: #E8A217;
+  --color-stone: #EBDEDC;
+  --color-stone-light: #F5E8E6;
+  --color-border-active: #E8A217;
+  */
+
+  /* --- PALETTE 5: Coastal Aegean & Coral (Commented Out) ---
+     A fresh, breezy coast vibe with Deep Navy, Aegean Blue, Seafoam, and Popping Coral
+  --color-paper: #F4F8F8;
+  --color-ink: #1C3540;
+  --color-ink-soft: #4D6D7A;
+  --color-moss: #2D728F;
+  --color-moss-dark: #22586E;
+  --color-clay: #E07A5F;
+  --color-stone: #D3E1E2;
+  --color-stone-light: #E8F1F2;
+  --color-border-active: #E07A5F;
+  */
+
+  /* --- PALETTE 6: Imperial Emerald & Brass (Commented Out) ---
+     A rich, luxurious healing theme with Imperial Emerald Green and Metallic Brass Gold
+  --color-paper: #FDFBF7;
+  --color-ink: #0A1C16;
+  --color-ink-soft: #50655F;
+  --color-moss: #123C30;
+  --color-moss-dark: #0C2B22;
+  --color-clay: #D4AF37;
+  --color-stone: #E6E0D5;
+  --color-stone-light: #F4F0E6;
+  --color-border-active: #D4AF37;
+  */
+
+  /* --- PALETTE 7: Amethyst & Rose Gold (Commented Out) ---
+     A royal, mystical purple theme with Rose Gold highlights
+  --color-paper: #FAF8F9;
+  --color-ink: #1D1128;
+  --color-ink-soft: #5E5366;
+  --color-moss: #3B1C56;
+  --color-moss-dark: #29133D;
+  --color-clay: #E0A996;
+  --color-stone: #EADFE2;
+  --color-stone-light: #F4ECEF;
+  --color-border-active: #E0A996;
+  */
+
+  /* --- PALETTE 8: Sapphire & Champagne Gold (Commented Out) ---
+     A classic heritage theme with Deep Oxford Navy, Platinum, and Champagne Gold
+  
+  --color-paper: #FAF9F6;
+  --color-ink: #0C1821;
+  --color-ink-soft: #475B6B;
+  --color-moss: #1A3A54;
+  --color-moss-dark: #12293C;
+  --color-clay: #D9B48F;
+  --color-stone: #E2DDD5;
+  --color-stone-light: #EBF2F5;
+  --color-border-active: #D9B48F;
+  */
+
+  /* --- Cream & Black Minimalist Theme (Commented Out) ---
+  --color-paper: #FFFDF2;
+  --color-ink: #000000;
+  --color-ink-soft: #47443d;
+  --color-moss: #000000;
+  --color-moss-dark: #27272a;
+  --color-clay: #000000;
+  --color-stone: #dcd8c8;
+  --color-stone-light: #f6f3e3;
+  --color-border-active: #000000;
+  */
+
+  /* --- Monochrome theme tokens (Commented Out) ---
+  --color-paper: #ffffff;
+  --color-ink: #000000;
+  --color-ink-soft: #52525b;
+  --color-moss: #000000;
+  --color-moss-dark: #18181b;
+  --color-clay: #000000;
+  --color-stone: #e4e4e7;
+  --color-stone-light: #f4f4f5;
+  --color-border-active: #000000;
+  */
 }
 
 @theme inline {
@@ -43,6 +168,7 @@ body {
   html {
     scroll-behavior: auto;
   }
+
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -62,6 +188,7 @@ button:focus-visible {
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     transform: translate3d(-50%, 0, 0);
   }
@@ -84,15 +211,20 @@ button:focus-visible {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #d4d4d8; /* zinc-300 */
+  background: #d4d4d8;
+  /* zinc-300 */
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #a1a1aa; /* zinc-400 */
+  background: #a1a1aa;
+  /* zinc-400 */
 }
 
 /* For Firefox */
@@ -100,4 +232,3 @@ button:focus-visible {
   scrollbar-width: thin;
   scrollbar-color: #d4d4d8 transparent;
 }
-

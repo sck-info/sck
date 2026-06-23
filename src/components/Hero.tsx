@@ -71,8 +71,8 @@ export default function Hero() {
               variants={itemVariants}
               className="lg:col-span-5 flex flex-col gap-3 group w-full"
             >
-              <div className="relative aspect-[4/5] w-full overflow-hidden border border-ink bg-stone-light p-3">
-                <div className="relative w-full h-full overflow-hidden border border-stone/65">
+              <div className="relative aspect-[4/5] w-full overflow-hidden border border-stone/40 bg-stone-light/20 shadow-[0_12px_24px_rgba(0,0,0,0.015),inset_0_2px_6px_rgba(0,0,0,0.02)] p-3.5">
+                <div className="relative w-full h-full overflow-hidden border border-stone/20">
                   <Image
                     src="/images/profile-hero1.jpeg"
                     alt="Portrait of Sharath Chandra Kancherla"
@@ -88,7 +88,7 @@ export default function Hero() {
                 <span>SHARATH CHANDRA KANCHERLA</span>
               </div>
             </motion.div>
-
+ 
             {/* Right Biography & CTA Column */}
             <motion.div 
               variants={itemVariants}
@@ -102,13 +102,16 @@ export default function Hero() {
                   Empowering individuals with practical tools for holistic well-being through biodynamic touch, traditional Japanese bodywork, therapeutic music, and celestial chart consultations. Spreading compassion and timeless values to live as one global family.
                 </p>
               </div>
-
+ 
               {/* Core Pillars List */}
-              <div className="flex flex-wrap gap-x-6 gap-y-2.5 font-mono text-[10px] uppercase tracking-widest text-ink-soft/95">
-                <span>[ CST Therapy ]</span>
-                <span>[ Rakkenho bodywork ]</span>
-                <span>[ Sound therapy ]</span>
-                <span>[ Vedic astrology ]</span>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2.5 font-mono text-[10px] uppercase tracking-widest text-ink-soft/95">
+                <span>CST Therapy</span>
+                <span className="text-stone/50 select-none">/</span>
+                <span>Rakkenho bodywork</span>
+                <span className="text-stone/50 select-none">/</span>
+                <span>Sound therapy</span>
+                <span className="text-stone/50 select-none">/</span>
+                <span>Vedic astrology</span>
               </div>
 
               {/* Classy Action Buttons */}

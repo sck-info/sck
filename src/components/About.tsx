@@ -39,7 +39,7 @@ export default function About() {
             <div className="mt-12 border-t border-stone pt-8">
               <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-ink-soft">Inspiration</span>
               <p className="mt-3 font-display text-xl font-medium text-ink leading-snug">
-                &ldquo;My work and life find their path in the grace and guidance of <span className="font-serif italic text-2xl">Gurudev Sri Sri Ravi Shankar</span>.&rdquo;
+                &ldquo;My work and life find their path in the grace and guidance of <a href="https://gurudev.artofliving.org/" target="_blank" rel="noopener noreferrer" className="font-serif italic text-2xl hover:underline decoration-clay">Gurudev Sri Sri Ravi Shankar</a>.&rdquo;
               </p>
             </div>
           </div>

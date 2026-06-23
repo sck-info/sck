@@ -17,7 +17,14 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-1.5 mt-2 bg-stone-light/50 px-2.5 py-1 text-[9px] font-mono uppercase tracking-wider text-ink-soft">
               <span>Inspiration:</span>
-              <span className="font-semibold text-ink">Gurudev Sri Sri Ravi Shankar</span>
+              <a
+                href="https://gurudev.artofliving.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-ink hover:underline decoration-clay"
+              >
+                Gurudev Sri Sri Ravi Shankar
+              </a>
             </div>
           </div>
 
