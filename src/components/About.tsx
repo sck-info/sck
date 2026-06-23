@@ -28,11 +28,11 @@ export default function About() {
               </h2>
               
               <p className="mt-8 text-sm leading-relaxed text-ink-soft font-light">
-                As a Holistic Wellness and Mind Coach, I have dedicated over a decade to helping individuals restore physical health and find emotional balance. Having touched more than 1.5 lakh lives across 10+ countries, my work integrates the restorative power of sound, hands-on biodynamic touch, and cosmic alignments to bring profound peace.
+                As a Holistic Wellness and Mind Coach, I have dedicated <span className="highlight-marker">more than a decade</span> to helping individuals restore physical health and find emotional balance. Having touched more than <span className="highlight-marker">1.5 lakh lives</span> across <span className="highlight-marker">10+ countries</span>, my work integrates the restorative power of sound, hands-on biodynamic touch, and cosmic alignments to bring profound peace.
               </p>
               
               <p className="mt-4 text-sm leading-relaxed text-ink-soft font-light">
-                I have trained over 30,000 corporate professionals from global organizations like Infosys, IBM, Microsoft, Google, Cognizant, TCS, and BIDCO Africa in stress-management, yoga, and purposeful living.
+                I have trained over <span className="highlight-marker">30,000+ corporate professionals</span> from global organizations like Infosys, IBM, Microsoft, Google, Cognizant, TCS, and BIDCO Africa in stress-management, yoga, and purposeful living.
               </p>
             </div>
 

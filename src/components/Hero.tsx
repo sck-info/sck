@@ -99,18 +99,18 @@ export default function Hero() {
                   Healing. Wisdom. Music.
                 </p>
                 <p className="text-sm leading-relaxed text-ink-soft font-light max-w-xl">
-                  Empowering individuals with practical tools for holistic well-being through biodynamic touch, traditional Japanese bodywork, therapeutic music, and celestial chart consultations. Spreading compassion and timeless values to live as one global family.
+                  Empowering individuals with practical tools for <span className="highlight-marker">holistic well-being</span> through biodynamic touch, traditional Japanese bodywork, therapeutic music, and celestial chart consultations. Spreading compassion and timeless values to <span className="highlight-marker">live as one global family</span>.
                 </p>
               </div>
  
               {/* Core Pillars List */}
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2.5 font-mono text-[10px] uppercase tracking-widest text-ink-soft/95">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] font-bold uppercase tracking-widest text-ink">
                 <span>CST Therapy</span>
-                <span className="text-stone/50 select-none">/</span>
+                <span className="text-clay select-none font-sans">&bull;</span>
                 <span>Rakkenho bodywork</span>
-                <span className="text-stone/50 select-none">/</span>
+                <span className="text-clay select-none font-sans">&bull;</span>
                 <span>Sound therapy</span>
-                <span className="text-stone/50 select-none">/</span>
+                <span className="text-clay select-none font-sans">&bull;</span>
                 <span>Vedic astrology</span>
               </div>
 

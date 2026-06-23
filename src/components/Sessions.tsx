@@ -147,7 +147,7 @@ export default function Sessions() {
               Payment &amp; Coordination
             </p>
             <p className="mt-2 text-xs leading-relaxed text-ink-soft">
-              Pricing details are listed directly within the registration forms. Once you submit the form and complete your payment, our team will reach out within <span className="font-semibold text-ink">48 to 72 hours</span> to schedule and confirm your booking.
+              Pricing details are listed directly within the registration forms. Once you submit the form and complete your payment, our team will reach out within <span className="highlight-marker">48 to 72 hours</span> to schedule and confirm your booking.
             </p>
           </div>
 
