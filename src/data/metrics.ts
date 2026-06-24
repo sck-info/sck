@@ -8,18 +8,6 @@ export const metrics: Metric[] = [
     label: "Years of experience",
   },
   {
-    id: "countries-reached",
-    value: 10,
-    suffix: "+",
-    label: "Countries reached",
-  },
-  {
-    id: "states-india",
-    value: 8,
-    suffix: "+",
-    label: "States in India",
-  },
-  {
     id: "people-touched",
     value: 1.5,
     suffix: " Lakh+",
@@ -30,13 +18,25 @@ export const metrics: Metric[] = [
     id: "it-employees",
     value: 30000,
     suffix: "+",
-    label: "IT employees trained",
+    label: "Corporates trained",
+  },
+  {
+    id: "countries-reached",
+    value: 5,
+    suffix: "+",
+    label: "Countries reached",
+  },
+  {
+    id: "states-india",
+    value: 8,
+    suffix: "+",
+    label: "States in India",
   },
   {
     id: "satsangs",
     value: 1000,
     suffix: "+",
-    label: "Satsangs done",
+    label: "Bhajan Jamming Sessions",
   },
   {
     id: "music-students",
@@ -48,13 +48,13 @@ export const metrics: Metric[] = [
     id: "cst-sessions",
     value: 2000,
     suffix: "+",
-    label: "CST sessions done",
+    label: "CST sessions",
   },
   {
     id: "rakkenho-sessions",
     value: 250,
     suffix: "+",
-    label: "Rakkenho sessions done",
+    label: "Rakkenho therapies",
   },
   {
     id: "music-therapy-sessions",

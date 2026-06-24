@@ -13,7 +13,7 @@ export default function Metrics() {
           <h2 className="mt-4 font-display text-3xl font-medium tracking-tight text-ink sm:text-4xl">
             Over a Decade of <span className="font-serif italic font-normal">Impact</span>
           </h2>
-          <p className="mt-4 max-w-prose text-xs sm:text-sm text-ink-soft leading-relaxed">
+          <p className="mt-4 max-w-prose text-sm sm:text-base text-ink-soft leading-relaxed">
             A reflection of healing journeys, wisdom shared, and lives uplifted across borders.
           </p>
         </div>

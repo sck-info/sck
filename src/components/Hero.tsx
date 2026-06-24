@@ -23,16 +23,22 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+      transition: {
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+      },
     },
   };
 
   return (
-    <section id="top" className="relative pb-24 pt-20 sm:pt-28 sm:pb-36 bg-paper overflow-hidden">
+    <section
+      id="top"
+      className="relative pb-24 pt-20 sm:pt-28 sm:pb-36 bg-paper overflow-hidden"
+    >
       {/* Fine architectural thin line accents */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-stone" />
       <div className="absolute bottom-0 left-0 w-full h-[1px] bg-stone" />
-      
+
       {/* Side line accents to frame the "aura" of the page */}
       <div className="absolute left-[5%] top-0 h-full w-[1px] bg-stone/20 hidden xl:block" />
       <div className="absolute right-[5%] top-0 h-full w-[1px] bg-stone/20 hidden xl:block" />
@@ -45,7 +51,10 @@ export default function Hero() {
           className="flex flex-col items-center"
         >
           {/* Centered Luxury Badge */}
-          <motion.div variants={itemVariants} className="flex items-center gap-3.5 mb-10">
+          <motion.div
+            variants={itemVariants}
+            className="flex items-center gap-3.5 mb-10"
+          >
             <span className="text-[9px] uppercase tracking-[0.4em] font-bold text-ink-soft bg-stone-light/60 px-4.5 py-1.5 border border-stone">
               EST. 2012 / HOLISTIC MENTOR
             </span>
@@ -61,13 +70,15 @@ export default function Hero() {
             </h1>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="w-16 h-[1px] bg-ink my-12" />
+          <motion.div
+            variants={itemVariants}
+            className="w-16 h-[1px] bg-ink my-12"
+          />
 
           {/* Asymmetric Content Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center w-full mt-4">
-            
             {/* Left Portrait Column (Classy, Framed, Grayscale-to-Color) */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="lg:col-span-5 flex flex-col gap-3 group w-full"
             >
@@ -84,56 +95,64 @@ export default function Hero() {
                 </div>
               </div>
               <div className="flex justify-between px-1 text-[9px] font-mono tracking-widest text-ink-soft/75 uppercase">
-                <span>[ PORTRAIT.01 ]</span>
                 <span>SHARATH CHANDRA KANCHERLA</span>
               </div>
             </motion.div>
- 
-            {/* Right Biography & CTA Column */}
-            <motion.div 
-              variants={itemVariants}
-              className="lg:col-span-7 flex flex-col items-start gap-8"
-            >
-              <div className="border-l border-stone pl-6 py-2">
-                <p className="text-xs uppercase tracking-[0.25em] font-bold text-ink mb-2">
-                  Healing. Wisdom. Music.
-                </p>
-                <p className="text-sm leading-relaxed text-ink-soft font-light max-w-xl">
-                  Empowering individuals with practical tools for <span className="highlight-marker">holistic well-being</span> through biodynamic touch, traditional Japanese bodywork, therapeutic music, and celestial chart consultations. Spreading compassion and timeless values to <span className="highlight-marker">live as one global family</span>.
-                </p>
-              </div>
- 
-              {/* Core Pillars List */}
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] font-bold uppercase tracking-widest text-ink">
-                <span>CST Therapy</span>
-                <span className="text-clay select-none font-sans">&bull;</span>
-                <span>Rakkenho bodywork</span>
-                <span className="text-clay select-none font-sans">&bull;</span>
-                <span>Sound therapy</span>
-                <span className="text-clay select-none font-sans">&bull;</span>
-                <span>Vedic astrology</span>
-              </div>
 
-              {/* Classy Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-2">
-                <a
-                  href="#sessions"
-                  className="group inline-flex items-center justify-center gap-3.5 bg-ink text-paper px-10 py-5 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:bg-zinc-800 hover:-translate-y-0.5 active:translate-y-0 shadow-sm border border-ink"
-                >
-                  Explore Offerings
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
-                </a>
-                <a
-                  href="#about"
-                  className="inline-flex items-center justify-center bg-transparent text-ink px-10 py-5 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:bg-stone-light hover:-translate-y-0.5 active:translate-y-0 border border-stone"
-                >
-                  Read Biography
-                </a>
+            {/* Right Biography & CTA Column */}
+            <motion.div
+              variants={itemVariants}
+              className="lg:col-span-7 flex flex-col items-start"
+            >
+              <div className="border-l border-stone pl-6 py-2 flex flex-col gap-8">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.25em] font-bold text-ink mb-2">
+                    Healing. Wisdom. Music.
+                  </p>
+                  <p className="text-sm leading-relaxed text-ink-soft font-light max-w-xl">
+                    I empower individuals with practical tools for{" "}
+                    <span className="highlight-marker">holistic well-being</span>{" "}
+                    and physical restoration. I integrate restorative biodynamic touch, traditional Japanese bodywork, sound frequency healing, and celestial guidance to help you navigate life with clarity, while spreading compassion to{" "}
+                    <span className="highlight-marker">
+                      live as one global family
+                    </span>
+                    .
+                  </p>
+                </div>
+ 
+                {/* Core Pillars List */}
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] font-bold uppercase tracking-widest text-ink">
+                  <span>CST Therapy</span>
+                  <span className="text-clay select-none font-sans">&bull;</span>
+                  <span>Rakkenho Therapy</span>
+                  <span className="text-clay select-none font-sans">&bull;</span>
+                  <span>Sound therapy</span>
+                  <span className="text-clay select-none font-sans">&bull;</span>
+                  <span>Vedic astrology</span>
+                </div>
+
+                {/* Classy Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-2">
+                  <a
+                    href="#sessions"
+                    className="group inline-flex items-center justify-center gap-3.5 bg-ink text-paper px-10 py-5 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:bg-zinc-800 hover:-translate-y-0.5 active:translate-y-0 shadow-sm border border-ink"
+                  >
+                    Explore Offerings
+                    <ArrowRight
+                      className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                      aria-hidden="true"
+                    />
+                  </a>
+                  <a
+                    href="#about"
+                    className="inline-flex items-center justify-center bg-transparent text-ink px-10 py-5 text-xs uppercase tracking-widest font-semibold transition-all duration-300 hover:bg-stone-light hover:-translate-y-0.5 active:translate-y-0 border border-stone"
+                  >
+                    Read Biography
+                  </a>
+                </div>
               </div>
             </motion.div>
-
           </div>
-
         </motion.div>
       </Container>
     </section>

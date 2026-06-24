@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import CaptureProtection from "@/components/CaptureProtection";
 
@@ -20,6 +20,12 @@ const displayFont = Playfair_Display({
 
 const bodyFont = Plus_Jakarta_Sans({
   variable: "--font-body",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const poppinsFont = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -50,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${displayFont.variable} ${bodyFont.variable} scroll-smooth`}
+      className={`${displayFont.variable} ${bodyFont.variable} ${poppinsFont.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-paper text-ink antialiased">
         <CaptureProtection />

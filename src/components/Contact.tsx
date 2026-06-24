@@ -29,7 +29,7 @@ export default function Contact() {
           </div>
 
           <div className="lg:col-span-6 border border-stone p-8 bg-stone-light/20 flex flex-col gap-6">
-            <h3 className="text-xs uppercase tracking-widest font-bold text-ink">Get in Touch</h3>
+            <h3 className="font-display text-xl font-medium text-ink">Get in <span className="font-serif italic font-normal">Touch</span></h3>
             <ul className="flex flex-col gap-5">
               {contactItems.map(({ icon: Icon, label, href }) => (
                 <li key={label} className="flex items-center gap-3.5 border-b border-stone/50 pb-3 last:border-b-0 last:pb-0">
@@ -39,12 +39,12 @@ export default function Contact() {
                   {href ? (
                     <a
                       href={href}
-                      className="text-xs font-mono tracking-tight text-ink hover:underline hover:opacity-85 transition-all"
+                      className="text-xs font-poppins tracking-tight text-ink hover:underline hover:opacity-85 transition-all"
                     >
                       {label}
                     </a>
                   ) : (
-                    <span className="text-xs font-mono tracking-tight text-ink">{label}</span>
+                    <span className="text-xs font-poppins tracking-tight text-ink">{label}</span>
                   )}
                 </li>
               ))}
