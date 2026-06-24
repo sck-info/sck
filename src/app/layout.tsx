@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import CaptureProtection from "@/components/CaptureProtection";
 
 // ------------------------------------------------------------------
 // FONT CONFIGURATION
@@ -52,6 +53,7 @@ export default function RootLayout({
       className={`${displayFont.variable} ${bodyFont.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-paper text-ink antialiased">
+        <CaptureProtection />
         {children}
       </body>
     </html>

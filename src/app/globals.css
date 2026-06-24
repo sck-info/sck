@@ -239,3 +239,18 @@ button:focus-visible {
   font-weight: 700;
   color: var(--color-clay);
 }
+
+/* Print and screenshot/recess page hider */
+@media print {
+  body {
+    display: none !important;
+  }
+}
+
+/* Obscure blur filter when window loses focus (such as when launching a screen grabber) */
+body.obscured-blur {
+  filter: blur(25px) grayscale(100%);
+  pointer-events: none;
+  user-select: none;
+  transition: filter 0.15s ease-out;
+}
